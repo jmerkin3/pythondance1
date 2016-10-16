@@ -3,28 +3,52 @@ from Myro import *
 init("sim")
 
 #defining all dance moves
-def move1(): #first move of the dance
-    forward(3,1)
+def dancemove1(): #first move of the dance
+    forward(3,.75)
+    turnRight(2.49,1)
+    backward(2,.75)
     
-def move2(): #second move of the dance
-    wait(.5)
-    turnRight(3,1)
+def dancemove2(): #second move of the dance
+    forward(3,.75)
+    turnRight(2.49,1)
     
-def move3(): #third move of dance
-    wait(1)
+def dancemove3(): #third move of dance
+    turnLeft(5,.5)
+    turnRight(5,.5)
 
-#until base drop, run this x number of times
-#try to sync end of this up with base drop
-for w in range(1,18):
-    move1()
-    move2()
-    move3()
+#set up commands when music is mellow
+turnRight(1,6)
+turnLeft(1,6)
+forward(1,3)
+backward(1,4)
+forward(1,2)
+backward(1,1)
 
-#movement commands for base drop and maybe initsim
-#stuff
+#dancing
+for w in range(1,8):
+    dancemove1()
+    dancemove2()
+    dancemove3()
+    
+#base dropping
+turnLeft(1,1)
+forward(2,1)
+backward(2,1)
+forward(1,.5)
+turnRight(9,1)
+turnLeft(9,1)
+turnRight(26,2)
+wait(1)
 
-#go back to loop or make new loop
-for y in range(0,5):
-    move1()
-
-
+#more dancing
+for y in range(0,7):
+    dancemove1()
+    dancemove2()
+    dancemove3()
+    
+#ending
+turnBy(222)
+for seconds in timer(5):
+    forward(.5,1)
+    print ("THE END")
+    print ("Thanks for Watching!")
