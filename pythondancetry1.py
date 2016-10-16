@@ -34,7 +34,7 @@ for w in range(1,8):
 turnLeft(1,1)
 forward(2,1)
 backward(2,1)
-turnLeft(1,1)
+forward(1,.5)
 turnRight(9,1)
 turnLeft(9,1)
 turnRight(26,2)
@@ -47,4 +47,8 @@ for y in range(0,7):
     dancemove3()
     
 #ending
-turnBy(180)
+turnBy(222)
+for seconds in timer(5):
+    forward(.5,1)
+    print ("THE END")
+    print ("Thanks for Watching!")
