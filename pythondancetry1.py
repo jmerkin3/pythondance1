@@ -51,4 +51,4 @@ turnBy(222)
 for seconds in timer(5):
     forward(.5,1)
     print ("THE END")
-    print ("Thanks for Watching!")
+print ("Thanks for Watching!")
