@@ -35,9 +35,9 @@ turnLeft(1,1)
 forward(2,1)
 backward(2,1)
 forward(1,.5)
-turnRight(9,1)
-turnLeft(9,1)
-turnRight(26,2)
+turnRight(3,1)
+turnLeft(3,1)
+turnRight(.5,2)
 wait(1)
 
 #more dancing
